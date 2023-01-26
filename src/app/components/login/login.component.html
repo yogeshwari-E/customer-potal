@@ -1,0 +1,31 @@
+<mat-toolbar color = "primary">
+                              Customer Portal
+    <div class="bg"></div>
+    <!-- <button mat-button routerLink="home">
+      <mat-icon>login</mat-icon>
+      Home
+    </button> -->
+  </mat-toolbar>
+  
+  <div class="content">
+    <div class="form-container mat-elevation-z5">
+        <h1>Login</h1>
+        <form [formGroup] = "loginForm">
+            <mat-form-field>
+                <input matInput placeholder="Customer ID" style="font: size 36px" formControlName = "email"/>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Password" formControlName = "password" type = "password"/>
+            </mat-form-field>
+            <div class="center margin-top" >
+                <button mat-raised-button color="primary" style="padding: 12px 24px; font-size: 18px;" (click)="log()">Login</button>
+                
+            </div>
+            
+            <!-- <span class="center margin-top"> New to our platform? 
+                <a class="sign-up-link" routerLink = "sign-up"></a>
+            </span> -->
+        </form>
+    </div>
+  </div>
+

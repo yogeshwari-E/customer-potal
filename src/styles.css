@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-container{
+    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: hsla(111, 78%, 98%, 0.195);
+
+    
+    padding: 48px;
+    border-radius: 16px;
+}
+
+.form-container mat-form-field{
+    width: 100%;
+}
+
+
+
+html{
+    background-image: url("login-image.svg");  
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center; }
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top: 16px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mat-toolbar.mat-primary {
+    background: #302c2f;
+    color: rgb(245, 245, 245);
+  }
