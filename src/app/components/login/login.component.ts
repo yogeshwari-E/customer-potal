@@ -1,8 +1,9 @@
 import { Component, OnInit, ɵgetUnknownElementStrictMode  } from '@angular/core';
-// import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router'; 
 import { HttpClient } from '@angular/common/http'; 
 import { FormBuilder } from '@angular/forms'; 
+import { CportalService } from 'src/app/cportal.service';
 
 @Component({
   selector: 'app-login',
@@ -10,15 +11,17 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+dat: any;
   // loginForm = new FormGroup({
-  //   email: new FormControl(''),
+  //   username: new FormControl(''),
   //   password: new FormControl(''),
   // })
 
-  constructor(private router: Router, private http: HttpClient, private sd: FormBuilder) { } 
+
+  constructor(private customernumber : CportalService ,private router: Router, private http: HttpClient, private sd: FormBuilder) { } 
   loginForm = this.sd.group({ email: [''], password: [''] }) 
-   ngOnInit(): void { } 
+   ngOnInit(): void { this.dat = 'hello'} 
+   onSave() {this.customernumber.setData(this.dat)}
   inUrl:string = 'http://localhost:2000/auth'; data: any; 
   log() { 
   this.login(this.loginForm.value.email, 
@@ -33,7 +36,7 @@ export class LoginComponent implements OnInit {
       console.log(response);
   var result = this.data; 
   if(result === '"0"') { 
-  this.router.navigate(['/dashboard']); 
+  this.router.navigate(['/main']); 
   alert("Succesfully logged in!!");
   } else { alert("Something is wrong!!"); } } );  
 
@@ -41,9 +44,12 @@ export class LoginComponent implements OnInit {
       console.log(resp)
   },(err)=>{
     console.log(err)
-  })
+})
 
 
 }
 
+
+
+  
 }
