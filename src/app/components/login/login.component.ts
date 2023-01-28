@@ -36,6 +36,7 @@ dat: any;
       console.log(response);
   var result = this.data; 
   if(result === '"0"') { 
+    localStorage.setItem("USERID",userid);
   this.router.navigate(['/main']); 
   alert("Succesfully logged in!!");
   } else { alert("Something is wrong!!"); } } );  

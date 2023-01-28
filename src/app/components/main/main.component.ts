@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { CportalService } from 'src/app/cportal.service';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -37,9 +39,9 @@ export class MainComponent implements OnInit {
      
       this.Data = JSON.parse(JSON.stringify(response));
 
-
+      
       this.num = this.Data["KUNNR"];
-
+    
       this.name1 = this.Data["NAME1"];
   
   

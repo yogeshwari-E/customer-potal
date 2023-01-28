@@ -1,12 +1,14 @@
-.sign-up-link{
-    font-size: 1rem;
-    margin-left: 8px;
-}
-mat-toolbar{
-    justify-content: space-between;
+.sign-up-link:hover{
+    color: red; /* changes color on hover */
+    text-decoration: underline; /* adds underline on hover */
 }
 
-.content{
-    padding: 32px;
+mat-toolbar a{
+    color: black; /* changes color of links in mat-toolbar */
+    margin-right: 16px; /* adds margin to the right side of links */
 }
 
+.content h2{
+    font-size: 1.5rem; /* changes font size of h2 elements within .content */
+    margin-bottom: 16px; /* adds margin to the bottom of h2 elements */
+}
