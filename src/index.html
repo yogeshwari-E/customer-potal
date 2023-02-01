@@ -12,7 +12,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="mat-typography">
+<body onmousemove="getCursorPosition(event)">
+<script>
+  function getCursorPosition(event) {
+  const x = (event.clientX * 100) / window.innerWidth + "%";
+  const y = (event.clientY * 100) / window.innerHeight + "%";
+
+  const eyes1 = document.getElementById("eyes1");
+  const eyes2 = document.getElementById("eyes2");
+
+  eyes1.style.left = x;
+  eyes1.style.top = y;
+  eyes1.style.transform = `translate(-${x}, -${y})`;
+
+  eyes2.style.left = x;
+  eyes2.style.top = y;
+  eyes2.style.transform = `translate(-${x}, -${y})`;
+}
+
+const email = document.getElementById("email");
+const emailSpan = document.getElementById("span-email");
+const password = document.getElementById("password");
+const passwordSpan = document.getElementById("span-password");
+
+email.addEventListener("input", () => {
+  if (email.value) {
+    emailSpan.classList.add("focus-span");
+  } else {
+    emailSpan.classList.remove("focus-span");
+  }
+});
+
+password.addEventListener("input", () => {
+  if (password.value) {
+    passwordSpan.classList.add("focus-span");
+  } else {
+    passwordSpan.classList.remove("focus-span");
+  }
+});
+</script>
   <app-root></app-root>
  
 

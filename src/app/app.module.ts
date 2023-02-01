@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MainComponent } from './components/main/main.component';
@@ -24,17 +24,29 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { SalesComponent } from './sales/sales.component';
+import { CreditComponent } from './credit/credit.component';
+import { DebitComponent } from './debit/debit.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { PayageComponent } from './payage/payage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SignUpComponent,
+
     HeaderComponent,
     SidenavComponent,
     DashboardComponent,
     MainComponent,
+    DeliveryComponent,
+    SalesComponent,
+    CreditComponent,
+    DebitComponent,
+    InvoiceComponent,
+    PayageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<html>
+<body>
+<TABLE border="2">
+<thead>
+<tr>
+    <th>Sales Document No</th>
+    <th>Short Text</th>
+    <th>Required Quantity</th>
+    <th>Required Date</th>
+    <th>Purchase Number</th>
+    <th>Sold To</th>
+    <th>Net Price</th>
+
+</tr>
+</thead>
+
+<tr *ngFor = "let item of data">
+    <td>{{item.SD_DOC}}</td>
+    <td>{{item.SHORT_TEXT}}</td>
+    <td>{{item.REQ_QTY}}</td>
+    <td>{{item.REQ_DATE}}</td>
+    <td>{{item.PURCH_NO}}</td>
+    <td>{{item.SOLD_TO}}</td>
+    <td>{{item.NET_PRICE}}</td>
+</tr>
+
+</TABLE>
+</body>
+
+</html>

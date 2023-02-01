@@ -4,6 +4,17 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http'; 
 import { FormBuilder } from '@angular/forms'; 
 import { CportalService } from 'src/app/cportal.service';
+import {MDCRipple} from '@material/ripple';
+import { MatCardModule } from '@angular/material/card';
+import { NgModule } from '@angular/core';
+@NgModule({
+  imports: [
+    MatCardModule,
+    // other imports
+  ],
+  // ...
+})
+export class MyModule { }
 
 @Component({
   selector: 'app-login',

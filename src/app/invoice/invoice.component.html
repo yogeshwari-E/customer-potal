@@ -1,0 +1,25 @@
+<TABLE>
+<thead>
+    <tr>
+      <th><h1>Accounting Document No.</h1></th>
+      <th><h1>Fiscal Year</h1></th>
+      <th><h1>Debit/Credit indicator</h1></th>
+      <th><h1>Amount in Local Currency</h1></th>
+      <th><h1>Amount in Document Currency</h1></th>
+      <th><h1>Amount for Updating in General Ledger</h1></th>
+      <th><h1>Assignment Number</h1></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let obj of data">
+      <td>{{obj.BELNR}}</td>
+      <td>{{obj.GJAHR}}</td>
+      <td>{{obj.SHKZG}}</td>
+      <td>{{obj.DMBTR}}</td>
+      <td>{{obj.WRBTR}}</td>
+      <td>{{obj.PSWBT}}</td>
+      <td>{{obj.ZUONR}}</td>
+    </tr>
+</tbody>
+</TABLE>

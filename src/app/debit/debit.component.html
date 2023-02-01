@@ -1,0 +1,26 @@
+<table>
+<thead>
+    <tr>
+      <th><h1>Material Number</h1></th>
+      <th><h1>Plant</h1></th>
+      <th><h1>Quantity</h1></th>
+      <th><h1>Base Unit Of Measure</h1></th>
+      <th><h1>Accounting Document No.</h1></th>
+      <th><h1>Fiscal Year</h1></th>
+      <th><h1>Amount in Local Currency</h1></th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let obj of data">
+      <td>{{obj.MATNR}}</td>
+      <td>{{obj.WERKS}}</td>
+      <td>{{obj.MENGE}}</td>
+      <td>{{obj.MEINS}}</td>
+      <td>{{obj.BELNR}}</td>
+      <td>{{obj.GJAHR}}</td>
+      <td>{{obj.DMBTR}}</td>
+    </tr>
+</tbody>
+</table>
